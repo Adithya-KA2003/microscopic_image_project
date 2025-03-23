@@ -1,8 +1,11 @@
 Microscope Image Processing API Documentation
+---------------------------------------------
 Overview
+--------
 This Flask API processes microscope images, enabling functionalities like image stitching, Region of Interest (ROI) extraction, digital zooming, and auto-focus simulation. It uses Flask for the backend and OpenCV for image processing.
 
 Approach Taken
+--------------
 
 Image Stitching:
 -The API uses the ORB algorithm to detect keypoints and descriptors in overlapping microscope images.
@@ -22,6 +25,7 @@ Auto-Focus Simulation:
 -If the image is blurry (low variance), a sharpening filter is applied.
 
 Challenges Faced
+-----------------
 
 Image Stitching:
 Challenge: Stitching failed with insufficient overlapping areas or poor feature matching.
@@ -40,6 +44,7 @@ Challenge: Processing large images was slow.
 Solution: Optimized code and used efficient OpenCV functions.
 
 Optimizations Applied
+----------------------
 Efficient Image Processing:
 Used OpenCV's high-performance functions for zooming and resizing.
 Applied sharpening only when necessary.
@@ -54,6 +59,7 @@ Scalability:
 Saved processed images to disk to avoid reprocessing.
 
 Endpoints
+----------
 /images/upload (POST): Upload microscope images.
 /images/stitch (GET): Stitch uploaded images.
 /roi (POST): Extract an ROI from the stitched image.
@@ -63,4 +69,5 @@ Endpoints
 /auto_focus/<factor>x (GET): Serve the auto-focused image
 
 Conclusion
+------------
 This API provides a robust solution for processing microscope images, focusing on usability, performance, and scalability. It addresses challenges and applies optimizations to deliver accurate and efficient results.
