@@ -61,11 +61,17 @@ Saved processed images to disk to avoid reprocessing.
 Endpoints
 ----------
 /images/upload (POST): Upload microscope images.
+
 /images/stitch (GET): Stitch uploaded images.
+
 /roi (POST): Extract an ROI from the stitched image.
+
 /zoom (POST): Zoom the ROI (10X or 20X).
+
 /auto_focus (GET): Apply auto-focus to zoomed images.
+
 /zoom/<factor>x (GET): Serve the zoomed image.
+
 /auto_focus/<factor>x (GET): Serve the auto-focused image
 
 Conclusion
